@@ -7,4 +7,6 @@
     <string name="start_timer">Start timer</string>
     <string name="notification_title">Timer Running</string>
     <string name="notification_text">Running....</string>
+    <string name="channel_id">com.example.services</string>
+    <string name="channelName">Services</string>
 </resources>

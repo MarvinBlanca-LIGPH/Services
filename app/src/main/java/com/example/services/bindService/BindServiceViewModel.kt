@@ -22,7 +22,6 @@ class BindServiceViewModel(
         override fun onServiceDisconnected(name: ComponentName?) {
             myBindService = null
         }
-
     }
 
     fun startButton() {

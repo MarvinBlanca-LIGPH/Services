@@ -73,16 +73,21 @@ class MyForegroundService : Service() {
 
     @RequiresApi(Build.VERSION_CODES.O)
     private fun startOwnForeground() {
-        val notificationChannelId = "com.example.services"
-        val channelName = "Services"
         val channel = NotificationChannel(
-            notificationChannelId,
-            channelName,
+            resources.getString(R.string.channel_id),
+            resources.getString(R.string.channelName),
             NotificationManager.IMPORTANCE_NONE
         )
         val manager = (getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager)
         manager.createNotificationChannel(channel)
-        val notificationBuilder = NotificationCompat.Builder(this, notificationChannelId)
+
+        createNotification()
+    }
+
+    @RequiresApi(Build.VERSION_CODES.O)
+    private fun createNotification() {
+        val notificationBuilder =
+            NotificationCompat.Builder(this, resources.getString(R.string.channel_id))
         val notification = notificationBuilder.setOngoing(true)
             .setSmallIcon(R.mipmap.ic_launcher_round)
             .setContentTitle(resources.getString(R.string.notification_title))
