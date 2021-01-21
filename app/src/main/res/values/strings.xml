@@ -3,4 +3,10 @@
     <string name="start_service">Start Service</string>
     <string name="stop_service">Stop Service</string>
     <string name="times_up">Time\'s up.</string>
+    <string name="clock_tick">Clock still ticking</string>
+    <string name="start_timer">Start timer</string>
+    <string name="notification_title">Timer Running</string>
+    <string name="notification_text">Running....</string>
+    <string name="channel_id">com.example.services</string>
+    <string name="channelName">Services</string>
 </resources>

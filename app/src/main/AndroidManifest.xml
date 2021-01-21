@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.services">
 
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,19 +11,46 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Services">
-        <activity android:name=".serviceActivityComm.ServiceCommActivity">
+        <activity android:name=".foregroundService.ForegroundServiceActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".intentService.IntentServiceActivity">
+        <activity android:name=".callbackService.CallbackServiceActivity">
 <!--            <intent-filter>-->
 <!--                <action android:name="android.intent.action.MAIN" />-->
 
 <!--                <category android:name="android.intent.category.LAUNCHER" />-->
 <!--            </intent-filter>-->
+        </activity>
+        <activity android:name=".bindService.BindServiceActivity">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity android:name=".serviceActivityComm.ServiceCommActivity">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+        <activity android:name=".intentService.IntentServiceActivity">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
         </activity>
         <activity android:name=".sampleService.SampleServiceActivity">
 
@@ -44,7 +73,10 @@
 
         <service android:name=".sampleService.MyService" />
         <service android:name=".intentService.MyIntentService" />
-        <service android:name=".serviceActivityComm.MyIntentService"/>
+        <service android:name=".serviceActivityComm.MyIntentService" />
+        <service android:name=".bindService.MyBindService" />
+        <service android:name=".callbackService.MyCallbackService" />
+        <service android:name=".foregroundService.MyForegroundService" />
     </application>
 
 </manifest>
